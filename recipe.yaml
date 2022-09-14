@@ -34,6 +34,8 @@ tasks:
     src: ./tmp/recipe/fivemland.png
     dest: ./fivemland.png
 
+  - action: connect_database
+
   ## Download bulk esx scripts
   - action: download_github
     src: https://github.com/esx-framework/esx-legacy
