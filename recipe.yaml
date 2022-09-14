@@ -47,6 +47,15 @@ tasks:
     subpath: '[esx_addons]'
     dest: ./resources/[esx_addons]
 
+  - action: download_github
+    src: https://github.com/esx-framework/esx-legacy
+    ref: main
+    subpath: '[SQL]'
+    dest: ./tmp/sql
+
+  - action: query_database
+    file: ./tmp/sql/legacy.sql
+
   ## oxmysql
   - action: download_file
     url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
