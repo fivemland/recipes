@@ -43,6 +43,12 @@ tasks:
     subpath: '[esx]'
     dest: ./resources/[esx]
 
+  ## Change locales in [esx] scripts
+  - action: replace_string
+    file: ./resources/[esx]/es_extended/config.lua
+    search: "Config.Locale = 'en'"
+    replace: "Config.Locale = 'hu'"
+
   - action: download_github
     src: https://github.com/esx-framework/esx-legacy
     ref: main
@@ -78,6 +84,7 @@ tasks:
   - action: download_file
     url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
     path: ./tmp/ox_lib.zip
+
   - action: unzip
     src: ./tmp/ox_lib.zip
     dest: ./resources/[ox]
