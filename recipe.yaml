@@ -36,18 +36,12 @@ tasks:
 
   - action: connect_database
 
-  ## Download bulk esx scripts
+  ## Download esx framework
   - action: download_github
     src: https://github.com/esx-framework/esx-legacy
     ref: main
     subpath: '[esx]'
     dest: ./resources/[esx]
-
-  ## Change locales in [esx] scripts
-  - action: replace_string
-    file: ./resources/[esx]/es_extended/config.lua
-    search: "Config.Locale = 'en'"
-    replace: "Config.Locale = 'hu'"
 
   - action: download_github
     src: https://github.com/esx-framework/esx-legacy
