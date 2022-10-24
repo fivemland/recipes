@@ -141,7 +141,7 @@ tasks:
     ref: master
     dest: ./resources/screenshot-basic
 
-  # FiveM Land scripts
+  ## FiveM Land scripts
   - action: download_github
     src: https://github.com/fivemland/fl_nametag
     ref: main
