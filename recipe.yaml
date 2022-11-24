@@ -121,6 +121,9 @@ tasks:
     ref: main
     dest: ./resources/[esx_addons]/esx-npwd
 
+  - action: query_database
+    file: ./tmp/recipe/npwd_fix.sql
+
   ## pma-voice
   - action: download_github
     src: https://github.com/AvarianKnight/pma-voice
