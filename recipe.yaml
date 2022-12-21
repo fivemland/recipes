@@ -85,7 +85,7 @@ tasks:
 
   ## fivem-appearance
   - action: download_github
-    src: https://github.com/wasabirobby/fivem-appearance/
+    src: https://github.com/fivemland/fivem-appearance/
     ref: main
     dest: ./resources/fivem-appearance/
 
