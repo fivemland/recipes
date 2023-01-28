@@ -1,5 +1,2 @@
 ALTER TABLE users 
-ADD COLUMN IF NOT EXISTS `phone_number` VARCHAR(20);
-
-ALTER TABLE users
-MODIFY COLUMN `phone_number` VARCHAR(20);
+ADD COLUMN `phone_number` VARCHAR(20);
