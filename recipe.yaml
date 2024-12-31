@@ -315,8 +315,8 @@ tasks:
   - action: remove_path
     path: ./tmp
   - action: remove_path
-    path: ./resources/[esx]/esx_skin
+    path: ./resources/[core]/esx_skin
   - action: remove_path
-    path: ./resources/[esx]/skinchanger
+    path: ./resources/[core]/skinchanger
   - action: remove_path
     path: ./resources/[core]/esx_example
