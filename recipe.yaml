@@ -295,7 +295,7 @@ tasks:
     dest: ./resources/[fivemland]/fl_nametag
 
   - action: download_github
-    src: https://github.com/fivemland/fl_adminpanel
+    src: https://github.com/fivemland/fl_adminmenu
     ref: main
     dest: ./resources/[fivemland]/fl_adminpanel
 
