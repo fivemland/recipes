@@ -247,11 +247,11 @@ tasks:
     ref: main
     dest: ./resources/[ox]/ox_fuel
 
-  ## fivem-appearance
+  ## appearance
   - action: download_github
-    src: https://github.com/fivemland/fivem-appearance/
+    src: https://github.com/iLLeniumStudios/illenium-appearance
     ref: main
-    dest: ./resources/fivem-appearance/
+    dest: ./resources/illenium-appearance/
 
   ## npwd
   - action: download_file
