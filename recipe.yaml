@@ -1,9 +1,9 @@
 $engine: 3
 $minFxVersion: 5949
-$onesync: legacy
+$onesync: on
 name: fl_esx_recipe
 version: 1.1.0
-author: Csoki
+author: Csoki&Adam
 description: FiveM Land - ESX Legacy Recipe
 
 tasks:
@@ -13,6 +13,8 @@ tasks:
     ref: master
     subpath: resources
     dest: ./resources/[cfx-default]
+  - action: remove_path
+    path: ./resources/[cfx-default]/[gameplay]/chat
 
   ## bob74_ipl
   - action: download_github
