@@ -253,6 +253,18 @@ tasks:
     ref: main
     dest: ./resources/illenium-appearance/
 
+  - action: query_database
+    file: ./resources/illenium-appearance/sql/management_outfits.sql
+
+  - action: query_database
+    file: ./resources/illenium-appearance/sql/player_outfit_codes.sql
+
+  - action: query_database
+    file: ./resources/illenium-appearance/sql/player_outfits.sql
+
+  - action: query_database
+    file: ./resources/illenium-appearance/sql/playerskins.sql
+
   ## npwd
   - action: download_file
     url: https://github.com/project-error/npwd/releases/latest/download/npwd.zip
