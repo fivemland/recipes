@@ -45,6 +45,9 @@ tasks:
   - action: move_path
     src: ./tmp/core/[core]
     dest: ./resources/[core]
+    
+  - action: remove_path
+    path: ./resources/[core]/esx_multicharacter
 
   - action: replace_string
     file: ./resources/[core]/es_extended/shared/config/main.lua
