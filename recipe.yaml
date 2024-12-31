@@ -13,8 +13,6 @@ tasks:
     ref: master
     subpath: resources
     dest: ./resources/[cfx-default]
-  - action: remove_path
-    path: ./resources/[cfx-default]/[gameplay]/chat
 
   ## bob74_ipl
   - action: download_github
