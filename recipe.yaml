@@ -46,6 +46,11 @@ tasks:
     src: ./tmp/core/[core]
     dest: ./resources/[core]
 
+  - action: replace_string
+    file: ./resources/[core]/es_extended/shared/config/main.lua
+    search: 'Config.CustomInventory = false'
+    replace: 'Config.CustomInventory = "ox"'
+
   - action: query_database
     file: ./tmp/core/[SQL]/legacy.sql
 
