@@ -1,9 +1,9 @@
 $engine: 3
 $minFxVersion: 13165
-$onesync: legacy
+$onesync: on
 name: fl_esx_recipe
 version: 1.1.0
-author: Csoki
+author: Csoki&Adam
 description: FiveM Land - ESX Legacy Recipe
 
 tasks:
@@ -45,6 +45,14 @@ tasks:
   - action: move_path
     src: ./tmp/core/[core]
     dest: ./resources/[core]
+
+  - action: remove_path
+    path: ./resources/[core]/esx_multicharacter
+
+  - action: replace_string
+    file: ./resources/[core]/es_extended/shared/config/main.lua
+    search: 'Config.CustomInventory = false'
+    replace: 'Config.CustomInventory = "ox"'
 
   - action: query_database
     file: ./tmp/core/[SQL]/legacy.sql
@@ -90,7 +98,7 @@ tasks:
     path: ./tmp/files/esx_hud.zip
     url: https://github.com/esx-framework/esx_hud/releases/latest/download/esx_hud.zip
   - action: unzip
-    dest: ./tmp/addons/esx_hud
+    dest: ./tmp/addons
     src: ./tmp/files/esx_hud.zip
 
   - action: download_github
@@ -239,11 +247,23 @@ tasks:
     ref: main
     dest: ./resources/[ox]/ox_fuel
 
-  ## fivem-appearance
+  ## appearance
   - action: download_github
-    src: https://github.com/fivemland/fivem-appearance/
+    src: https://github.com/iLLeniumStudios/illenium-appearance
     ref: main
-    dest: ./resources/fivem-appearance/
+    dest: ./resources/illenium-appearance/
+
+  - action: query_database
+    file: ./resources/illenium-appearance/sql/management_outfits.sql
+
+  - action: query_database
+    file: ./resources/illenium-appearance/sql/player_outfit_codes.sql
+
+  - action: query_database
+    file: ./resources/illenium-appearance/sql/player_outfits.sql
+
+  - action: query_database
+    file: ./resources/illenium-appearance/sql/playerskins.sql
 
   ## npwd
   - action: download_file
@@ -290,9 +310,9 @@ tasks:
     dest: ./resources/[fivemland]/fl_nametag
 
   - action: download_github
-    src: https://github.com/fivemland/fl_adminpanel
+    src: https://github.com/fivemland/fl_adminmenu
     ref: main
-    dest: ./resources/[fivemland]/fl_adminpanel
+    dest: ./resources/[fivemland]/fl_adminmenu
 
   - action: download_github
     src: https://github.com/fivemland/fl_spectate
@@ -313,8 +333,8 @@ tasks:
   - action: remove_path
     path: ./tmp
   - action: remove_path
-    path: ./resources/[esx]/esx_skin
+    path: ./resources/[core]/esx_skin
   - action: remove_path
-    path: ./resources/[esx]/skinchanger
+    path: ./resources/[core]/skinchanger
   - action: remove_path
     path: ./resources/[core]/esx_example
