@@ -1,5 +1,5 @@
 $engine: 3
-$minFxVersion: 5949
+$minFxVersion: 13165
 $onesync: legacy
 name: fl_esx_recipe
 version: 1.1.0
