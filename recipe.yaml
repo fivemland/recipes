@@ -1,8 +1,7 @@
 $engine: 3
-$minFxVersion: 13165
 $onesync: on
 name: fl_esx_recipe
-version: 1.1.0
+version: 1.2.0
 author: Csoki&Adam
 description: FiveM Land - ESX Legacy Recipe
 
