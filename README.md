@@ -7,7 +7,7 @@
 ### Link
 
 ```
-https://raw.githubusercontent.com/fivemland/recipes/main/recipe.yaml
+https://raw.githubusercontent.com/fivemland/recipes/refs/heads/main/recipe.yaml
 ```
 
 ### Scripts
