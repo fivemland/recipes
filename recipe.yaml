@@ -80,7 +80,7 @@ tasks:
     path: ./tmp/oxmysql.zip
   - action: unzip
     src: ./tmp/oxmysql.zip
-    dest: ./resources/[standalone]
+    dest: ./resources/[ox]
 
   ## ox_inventory
   - action: download_file
@@ -88,7 +88,7 @@ tasks:
     path: ./tmp/ox_inventory.zip
   - action: unzip
     src: ./tmp/ox_inventory.zip
-    dest: ./resources/[standalone]
+    dest: ./resources/[ox]
 
   ## ox_lib
   - action: download_file
@@ -96,13 +96,13 @@ tasks:
     path: ./tmp/ox_lib.zip
   - action: unzip
     src: ./tmp/ox_lib.zip
-    dest: ./resources/[standalone]
+    dest: ./resources/[ox]
 
   ## ox_fuel
   - action: download_github
     src: https://github.com/overextended/ox_fuel
     ref: main
-    dest: ./resources/[standalone]/ox_fuel
+    dest: ./resources/[ox]/ox_fuel
 
   ## appearance
   - action: download_file
