@@ -105,12 +105,10 @@ tasks:
     dest: ./resources/[ox]/ox_fuel
 
   ## appearance
-  - action: download_file
-    url: https://github.com/fivemland/illenium-appearance/releases/latest/download/illenium-appearance.zip
-    path: ./tmp/illenium-appearance.zip
-  - action: unzip
-    src: ./tmp/illenium-appearance.zip
-    dest: ./resources/[standalone]
+  - action: download_github
+    src: https://github.com/fivemland/illenium-appearance
+    ref: main
+    dest: ./resources/[standalone]/illenium-appearance
 
   - action: query_database
     file: ./resources/[standalone]/illenium-appearance/sql/management_outfits.sql
