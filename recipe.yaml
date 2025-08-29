@@ -6,24 +6,20 @@ author: Csoki&Adam
 description: FiveM Land - ESX Legacy Recipe (Updated)
 
 tasks:
-  ## Download default CFX resources
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     ref: master
     subpath: resources
     dest: ./resources/[cfx-default]
 
-  # Remove chat resource (conflicts with ESX)
   - action: remove_path
     path: ./resources/[cfx-default]/[gameplay]/chat
 
-  ## bob74_ipl
   - action: download_github
     src: https://github.com/Bob74/bob74_ipl
     ref: master
     dest: ./resources/[standalone]/bob74_ipl
 
-  ## Download FiveM Land 'recipes' repo
   - action: download_github
     src: https://github.com/fivemland/recipes
     ref: main
@@ -37,10 +33,8 @@ tasks:
     src: ./tmp/recipe/fivemland.png
     dest: ./fivemland.png
 
-  ## Database connection
   - action: connect_database
 
-  ## Download esx core
   - action: download_github
     src: https://github.com/esx-framework/esx-core
     ref: main
@@ -49,13 +43,11 @@ tasks:
   - action: query_database
     file: ./tmp/core/[SQL]/legacy.sql
 
-  ## Download ESX Legacy Addons (új módszer)
   - action: download_github
     src: https://github.com/esx-framework/ESX-Legacy-Addons
     ref: main
     dest: ./tmp/addons
 
-  ## Move core and addons
   - action: move_path
     src: ./tmp/core/[core]
     dest: ./resources/[core]
@@ -64,17 +56,14 @@ tasks:
     src: ./tmp/addons/[esx_addons]
     dest: ./resources/[esx_addons]
 
-  ## Remove multicharacter (if using custom)
   - action: remove_path
     path: ./resources/[core]/esx_multicharacter
 
-  ## Configure ox_inventory
   - action: replace_string
     file: ./resources/[core]/es_extended/shared/config/main.lua
     search: 'Config.CustomInventory = false'
     replace: 'Config.CustomInventory = "ox"'
 
-  ## oxmysql
   - action: download_file
     url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
     path: ./tmp/oxmysql.zip
@@ -82,7 +71,6 @@ tasks:
     src: ./tmp/oxmysql.zip
     dest: ./resources/[ox]
 
-  ## ox_inventory
   - action: download_file
     url: https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
     path: ./tmp/ox_inventory.zip
@@ -90,7 +78,6 @@ tasks:
     src: ./tmp/ox_inventory.zip
     dest: ./resources/[ox]
 
-  ## ox_lib
   - action: download_file
     url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
     path: ./tmp/ox_lib.zip
@@ -98,13 +85,11 @@ tasks:
     src: ./tmp/ox_lib.zip
     dest: ./resources/[ox]
 
-  ## ox_fuel
   - action: download_github
     src: https://github.com/overextended/ox_fuel
     ref: main
     dest: ./resources/[ox]/ox_fuel
 
-  ## appearance
   - action: download_github
     src: https://github.com/fivemland/illenium-appearance
     ref: main
@@ -122,7 +107,6 @@ tasks:
   - action: query_database
     file: ./resources/[standalone]/illenium-appearance/sql/playerskins.sql
 
-  ## npwd
   - action: download_file
     url: https://github.com/project-error/npwd/releases/latest/download/npwd.zip
     path: ./tmp/npwd.zip
@@ -148,19 +132,16 @@ tasks:
     search: '"defaultLanguage": "en"'
     replace: '"defaultLanguage": "hu"'
 
-  ## pma-voice
   - action: download_github
     src: https://github.com/AvarianKnight/pma-voice
     ref: main
     dest: ./resources/[standalone]/pma-voice
 
-  ## screenshot-basic
   - action: download_github
     src: https://github.com/project-error/screenshot-basic
     ref: master
     dest: ./resources/[standalone]/screenshot-basic
 
-  ## FiveM Land scripts
   - action: download_github
     src: https://github.com/fivemland/fl_nametag
     ref: main
@@ -186,7 +167,6 @@ tasks:
     ref: main
     dest: ./resources/[fivemland]/fl_scoreboard
 
-  ## cleanup
   - action: remove_path
     path: ./tmp
   - action: remove_path
