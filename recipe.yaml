@@ -106,7 +106,7 @@ tasks:
 
   ## appearance
   - action: download_file
-    url: https://github.com/iLLeniumStudios/illenium-appearance/releases/latest/download/illenium-appearance.zip
+    url: https://github.com/fivemland/illenium-appearance/releases/latest/download/illenium-appearance.zip
     path: ./tmp/illenium-appearance.zip
   - action: unzip
     src: ./tmp/illenium-appearance.zip
