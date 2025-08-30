@@ -159,6 +159,16 @@ tasks:
     dest: ./resources/[fivemland]/fl_adminmenu
 
   - action: download_github
+    src: https://github.com/fivemland/nv_loadingscreen
+    ref: main
+    dest: ./resources/[fivemland]/nv_loadingscreen
+  
+  - action: download_github
+    src: https://github.com/monolith-vision/monolith-clothingmenu
+    ref: main
+    dest: ./resources/[fivemland]/monolith-clothingmenu
+
+  - action: download_github
     src: https://github.com/fivemland/fl_spectate
     ref: main
     dest: ./resources/[fivemland]/fl_spectate
@@ -182,8 +192,12 @@ tasks:
   - action: remove_path
     path: ./resources/[core]/skinchanger
   - action: remove_path
-    path: ./resources/[core]/esx_accessories
+    path: ./resources/[core]/esx_loadingscreen
   - action: remove_path
-    path: ./resources/[core]/esx_barbershop
+    path: ./resources/[esx_addons]/esx_accessories
   - action: remove_path
-    path: ./resources/[core]/esx_clotheshop
+    path: ./resources/[esx_addons]/esx_barbershop
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_clotheshop
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_shops
