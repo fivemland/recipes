@@ -63,7 +63,7 @@ tasks:
     dest: ./resources/[esx_addons]
 
   - action: remove_path
-    path: ./resources/[core]/esx_multicharacter
+    path: ./resources/[core]/esx_inventory
 
   - action: replace_string
     file: ./resources/[core]/es_extended/shared/config/main.lua
