@@ -40,6 +40,10 @@ tasks:
     path: ./tmp/esx_core.zip
   - action: unzip
     src: ./tmp/esx_core.zip
+    dest: ./tmp/esx_core
+    
+  - action: move_path
+    src: ./tmp/esx_core/esx_core
     dest: ./tmp/core
 
   - action: query_database
