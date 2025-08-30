@@ -160,7 +160,7 @@ tasks:
 
   - action: download_github
     src: https://github.com/fivemland/nv_loadingscreen
-    ref: main
+    ref: v1.6
     dest: ./resources/[fivemland]/nv_loadingscreen
   
   - action: download_github
