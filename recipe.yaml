@@ -78,7 +78,7 @@ tasks:
     dest: ./resources/[ox]
 
   - action: download_file
-    url: https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
+    url: https://github.com/At0mit0s/ox_inventory_redesign/releases/latest/download/ox_inventory.zip
     path: ./tmp/ox_inventory.zip
   - action: unzip
     src: ./tmp/ox_inventory.zip
